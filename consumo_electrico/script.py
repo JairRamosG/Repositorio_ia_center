@@ -29,9 +29,7 @@ def extraccion_pagina(soup):
             if "Demanda Neta:" in p_tag.text:
                  demanda_neta = float(p_tag.select_one(".bold").text.replace(",","")[:-3]) 
             elif "Generación Neta:" in p_tag.text:
-                 generacion_neta = float(p_tag.select_one(".bold").text.replace(",","")[:-3])
-            elif "Pronóstico Neto:" in p_tag.text:
-                 pronostico_neto = p_tag.select_one(".bold").text.replace(",","")[:-3]     
+                 generacion_neta = float(p_tag.select_one(".bold").text.replace(",","")[:-3])             
                
       datos.append({
               "Fecha" : fecha,
